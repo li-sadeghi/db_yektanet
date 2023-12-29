@@ -1,16 +1,16 @@
 create table Advertiser (
 	id INT PRIMARY KEY,
-	clicks INT,
-	views INT,
-	name VARCHAR (20) NOT NULL
+	clicks INT NOT NULL,
+	views INT NOT NULL,
+	name VARCHAR (20)
 );
 create table Ad (
 	id INT PRIMARY KEY,
-	click INT,
-	views INT,
+	click INT NOT NULL,
+	views INT NOT NULL,
 	title VARCHAR (20),
-	imgUrl VARCHAR,
-	link VARCHAR,
+	imgUrl VARCHAR NOT NULL,
+	link VARCHAR NOT NULL,
 	advertiser_id INT NOT NULL,
 	constraint fk_Advertiser
 		foreign key(id)
